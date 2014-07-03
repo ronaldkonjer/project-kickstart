@@ -1,0 +1,106 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel</title>
+    <!-- build:css(.tmp) styles/app.css -->
+    <link rel="stylesheet" href="styles/app.css" />
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+<nav class="top-bar">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="index.html">ChicksRule</a></h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+  <ul class="right">
+    <li><a href="parallax.html">parallax</a></li>
+    <li><a href="carousel.html">carousel</a></li>
+    <li><a href="header.html">header</a></li>
+    <li><a href="#">Top Chicks</a></li>
+  </ul>
+</section>
+
+</nav>
+	
+<ul class="example-orbit" data-orbit>
+  <li>
+<picture>
+  <!--[if IE 9]><video style="display: none;"><![endif]-->
+  <source srcset="images/banner-large.gif" media="(min-width: 57em)" />
+  <source srcset="images/banner-medium.gif" media="(min-width: 43em)" />
+  <source srcset="images/banner-small.gif" media="(min-width: 30em)" />
+  <!--[if IE 9]></video><![endif]-->
+  <img srcset="images/banner-small.gif" alt="blaa" />
+</picture>
+
+	    <div class="orbit-caption">
+      Caption One.
+    </div>
+  </li>
+  <li>
+ <picture>
+  <!--[if IE 9]><video style="display: none;"><![endif]-->
+  <source srcset="images/banner-large.gif" media="(min-width: 57em)" />
+  <source srcset="images/banner-medium.gif" media="(min-width: 43em)" />
+  <source srcset="images/banner-small.gif" media="(min-width: 30em)" />
+  <!--[if IE 9]></video><![endif]-->
+  <img srcset="images/banner-small.gif" alt="blaa" />
+</picture>
+    <div class="orbit-caption">
+      Caption Two.
+    </div>
+  </li>
+  <li>
+ <picture>
+  <!--[if IE 9]><video style="display: none;"><![endif]-->
+  <source srcset="images/banner-large.gif" media="(min-width: 57em)" />
+  <source srcset="images/banner-medium.gif" media="(min-width: 43em)" />
+  <source srcset="images/banner-small.gif" media="(min-width: 30em)" />
+  <!--[if IE 9]></video><![endif]-->
+  <img srcset="images/banner-small.gif" alt="blaa" />
+</picture>
+    <div class="orbit-caption">
+      Caption Three.
+    </div>
+  </li>
+</ul>
+
+<!-- build:js scripts/vendor/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+     <script>window.jQuery || document.write(' <script src="bower_components/jquery/dist/jquery.js"><\/script>')</script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+     <script src="bower_components/imagesloaded/imagesloaded.pkgd.js"></script>
+    <script src="bower_components/enquire/dist/enquire.min.js"></script>
+    <script src="bower_components/jquery-waypoints/waypoints.js"></script>
+    <script src="bower_components/bower-skrollr/skrollr.js"></script>
+    <script>
+		// Picture element HTML5 shiv
+		document.createElement( "picture" );
+	</script>
+	<!--<script src="bower_components/picturefill/picturefill.js" async></script>-->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- ref:remove -->
+    <script data-main="js/main" src="bower_components/requirejs/require.js"></script>
+    <script src="js/config.js"></script>
+    <!-- endref -->
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <!--<script src="../dist/scripts/main.js"></script>-->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/app.js -->
+    <script src="js/app.js"></script>
+    <!-- endbuild -->
+       
+</body>
+</html>
