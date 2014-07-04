@@ -1,4 +1,5 @@
-
+/* global define, 'Modernizr', '$', '_', 'Fastclick', 'Foundation', 'imagesLoaded', 'Picturefill', 'Enquire', 'Skrollr', */
+/* jshint indent:4 */
 /**
  * This demo was prepared for you by Petr Tichy - Ihatetomatoes.net
  * Want to see more similar demos and tutorials?
@@ -6,86 +7,103 @@
  * Article URL: http://ihatetomatoes.net/how-to-make-parallax-website-responsive/
  */
 
+define([
+    'jquery',
+    'modernizr',
+    'underscore',
+    'fastclick',
+    'foundation',
+    'imagesloaded',
+    'picturefill',
+    'enquire',
+    'skrollr'    
+], function($, Modernizr, _, FastClick, imagesLoaded, Picturefill, Enquire, Skrollr) {
+    'use strict';
 
-( function( $ ) {
+    // Setup variables
+    var $window = $(window);
+	var $slide = $('.homeSlide');
+	var $body = $('body');
 	
-	// Setup variables
-	$window = $(window);
-	$slide = $('.homeSlide');
-	$body = $('body');
-console.log($slide.length);
-if ($slide.length > 0) {	
-    //FadeIn all sections   
-	$body.imagesLoaded( function() {
-		setTimeout(function() {
-		      
-		      // Resize sections
-		      adjustWindow();
-		      
-		      // Fade in sections
-			  $body.removeClass('loading').addClass('loaded');
-			  
-		}, 800);
-	});
-	
-	function adjustWindow(){
+    $(document).foundation({});
+   
+    //$('#myModal').foundation('reveal', 'open');
 
-	    // Get window size
-	    winH = $window.height();
-	    winW = $window.width();
+    
+    //var self = {};
 
-	    // Keep minimum height 550
-	    if(winH <= 550) {
-	        winH = 550;
-	    }
+    function init() {
+        if ($slide.length > 0) {
+            //FadeIn all sections   
+            $body.imagesLoaded(function() {
+                setTimeout(function() {
 
-	    // Init Skrollr for 768 and up
-	    if( winW >= 768) {
+                    // Resize sections
+                    adjustWindow();
 
-	        // Init Skrollr
-	        var s = skrollr.init({
-	            forceHeight: false
-	        });
+                    // Fade in sections
+                    $body.removeClass('loading').addClass('loaded');
 
-	        // Resize our slides
-	        $slide.height(winH);
+                }, 800);
+            });
+            enquire.register("screen and (min-width : 43em;)", initAdjustWindow(), false);
+        };
 
-	        s.refresh($('.homeSlide'));
+    }
 
-	    } else {
+    function adjustWindow() {
 
-	        // Init Skrollr
-	        var s = skrollr.init();
-	        s.destroy();
-	    }
-	
-		// Check for touch
-	   	if(Modernizr.touch) {
+        // Get window size
+        var winH = $window.height();
+        var winW = $window.width();
 
-			// Init Skrollr
-			var s = skrollr.init();
-			s.destroy();
-	   	}
+        // Keep minimum height 550
+        if (winH <= 550) {
+            winH = 550;
+        }
 
-	}
-	
-	function initAdjustWindow() {
-	    return {
-	        match : function() {
-	            adjustWindow();
-	        },
-	        unmatch : function() {
-	            adjustWindow();
-	        }
-	    };
-	}
+        // Init Skrollr for 768 and up
+        if (winW >= 768) {
 
-	enquire.register("screen and (min-width : 43em;)", initAdjustWindow(), false);
-}		
-} )( jQuery );
+            // Init Skrollr
+            var s = skrollr.init({
+                forceHeight: false
+            });
 
-// Foundation JavaScript
-// Documentation can be found at: http://foundation.zurb.com/docs
+            // Resize our slides
+            $slide.height(winH);
 
-//$(document).foundation();
-/*console.log($(document).foundation());*/
+            s.refresh($('.homeSlide'));
+
+        } else {
+
+            // Init Skrollr
+            var s = skrollr.init();
+            s.destroy();
+        }
+
+        // Check for touch
+        if (Modernizr.touch) {
+
+            // Init Skrollr
+            var s = skrollr.init();
+            s.destroy();
+        }
+
+    }
+
+    function initAdjustWindow() {
+        return {
+            match: function() {
+                adjustWindow();
+            },
+            unmatch: function() {
+                adjustWindow();
+            }
+        };
+    }
+
+    return {
+        init: init
+    }
+});

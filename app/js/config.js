@@ -1,7 +1,22 @@
 /* global requirejs */
 requirejs.config({
     paths: {
+        /* Handlebars */
         'handlebars': '../bower_components/handlebars/handlebars.runtime',
+        
+        /* Underscore */
+        'underscore': '../bower_components/underscore/underscore',
+
+        /* ImagesLoaded */
+        'imagesloaded': '../bower_components/imagesloaded/imagesloaded.pkgd',
+
+        /* Enquire */
+        'enquire': '../bower_components/enquire/dist/enquire',
+
+        /* Skrollr */
+        'skrollr': '../bower_components/bower-skrollr/skrollr',
+
+        /* Picturefill */
         'picturefill': '../bower_components/picturefill/picturefill',
 
          /* jQuery */
@@ -11,7 +26,7 @@ requirejs.config({
         'foundation': '../bower_components/foundation/js/foundation.min',
 
         /* Foundation modules */
-        'foundation.core': '../bower_components/foundation/js/foundation/foundation',
+        /*'foundation.core': '../bower_components/foundation/js/foundation/foundation',
         'foundation.abide': '../bower_components/foundation/js/foundation/foundation.abide',
         'foundation.accordion': '../bower_components/foundation/js/foundation/foundation.accordion',
         'foundation.alert': '../bower_components/foundation/js/foundation/foundation.alert',
@@ -26,7 +41,9 @@ requirejs.config({
         'foundation.reveal': '../bower_components/foundation/js/foundation/foundation.reveal',
         'foundation.tab': '../bower_components/foundation/js/foundation/foundation.tab',
         'foundation.tooltip': '../bower_components/foundation/js/foundation/foundation.tooltip',
-        'foundation.topbar': '../bower_components/foundation/js/foundation/foundation.topbar',
+        'foundation.topbar': '../bower_components/foundation/js/foundation/foundation.topbar',*/
+
+        /* Custom jQuery plugins*/
 
         /* Vendor Scripts */
         'jquery.cookie': '../bower_components/foundation/js/vendor/jquery.cookie',
@@ -35,22 +52,47 @@ requirejs.config({
         'placeholder': '../bower_components/foundation/js/vendor/placeholder'
     },
     shim: {
+         /* Handlebars */
         'handlebars': {
             exports: 'Handlebars'
         },
+
+        /* Underscore */
+        'underscore': {
+            exports: '_'
+        },
+
+        /* ImagesLoaded */
+        'imagesloaded': {
+            deps : ['jquery'],
+            exports : 'imagesLoaded'
+        },
+
+        /* Enquire */
+        'enquire': {
+            exports: 'Enquire'
+        },
+
+        /* Skrollr */
+        'skrollr': {
+            exports: 'Skrollr'
+        },
+
+        /* Picturefill */
         'picturefill': {
             exports: 'Picturefill'
         },
+        
          /* Foundation total package*/
         'foundation': {
          deps: [
             'jquery',
             'modernizr'
             ],
-            exports: 'FoundationComplete'
+            exports: 'Foundation'
         },
         /* Foundation modules*/
-        'foundation.core': {
+       /* 'foundation.core': {
             deps: [
             'jquery',
             'modernizr'
@@ -133,6 +175,8 @@ requirejs.config({
             'foundation.core'
             ]
         },
+*/
+         /* Custom jQuery plugins*/
 
         /* Vendor Scripts */
         'jquery.cookie': {

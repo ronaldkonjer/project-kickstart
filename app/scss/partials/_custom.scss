@@ -1,113 +1,141 @@
- /* Parallax Scroll
+/* Parallax Scroll
    ========================================================================== */
-body, html {
-	height: 100%;
-	min-height: 100%;
-	background-color: #fff;
-}
-body {
-	
-}
-.no-js {
-	padding-top: 106px;
-}
-h2 {
-	margin-top: 0;
-}
-.loading {
-	
-}
-section.homeSlide {
-    opacity: 0;
-	height: 360px;
+
+/* body, html {
+  height: 100%;
+  min-height: 100%;
+  background-color: #fff;
 }
 
-.loaded section.homeSlide,
-.no-js section.homeSlide {
-	opacity: 1;
-	-webkit-transition: opacity 300ms ease-out;
-	-moz-transition: opacity 300ms ease-out;
-	transition: opacity 300ms ease-out;
+body! {}
+
+.no-js {
+  padding-top: 106px;
+} */
+
+body! {}
+
+/* .no-js {
+  padding-top: 106px;
+}
+ */
+
+h2 {
+  margin-top: 0;
+}
+
+.loading! {}
+
+section.homeSlide {
+  opacity: 0;
+  height: 360px;
+}
+
+.loaded section.homeSlide, .no-js section.homeSlide {
+  opacity: 1;
+  -webkit-transition: opacity 300ms ease-out;
+  -moz-transition: opacity 300ms ease-out;
+  transition: opacity 300ms ease-out;
 }
 
 main {
-	overflow-x: hidden;
+  overflow-x: hidden;
 }
+
 #preload {
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	top: 0;
-	left: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
+
 .bcg {
-    background-size: cover;
-    height: 100%;
-    width: 100%;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .hsContainer {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
 }
-    .hsContent {
-        max-width: 80%;
-        margin: -150px auto 0 auto;
-        display: table-cell;
-        vertical-align: middle;
-        padding: 0 8%;
-        text-align: center;
-        position: relative;
-    }
-    .hsContent h2  {
-        color: #fff8de;
-        background-color: rgba(0,0,0,0.5);
-        padding: 10px 5px;
-        font-size: 20px;
-        line-height: 23px;
-        margin-bottom: 12px;
-    }
-    .hsContent p {
-        width: 80%;
-        color: #b2b2b2;
-    }
-	.hsContent a {
-		color: #b2b2b2;
-		text-decoration: underline;
-	}
 
-	/* Slide 1 */
-	#slide-1 .bcg {background-image:image-url("bcg_slide-1.jpg")}
-    #slide-1 .hsContent {}
+.hsContent {
+  max-width: 80%;
+  margin: -150px auto 0 auto;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 8%;
+  text-align: center;
+  position: relative;
+  h2 {
+    color: #fff8de;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 5px;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 12px;
+  }
+  p {
+    width: 80%;
+    color: #b2b2b2;
+  }
+  a {
+    color: #b2b2b2;
+    text-decoration: underline;
+  }
+}
 
-	/* Slide 2 */
-	#slide-2 .bcg {background-image:image-url("bcg_slide-2.jpg")}
-	#slide-2 .hsContent {}
-	#slide-2 h2 {}
+/* Slide 1 */
 
-	/* Slide 3 */
-	#slide-3 .bcg {background-image:image-url("bcg_slide-3.jpg")}
-	#slide-3 .hsContent {}
-	    #slide-3 h2 {
-	        color: #f2ead6;
-	        background-color: rgba(0,0,0,0.6);
-	    }
+#slide-1 {
+  .bcg {
+    background-image: image-url("bcg_slide-1.jpg");
+  }
+  .hsContent! {}
+}
 
-	/* Slide 4 */
-	#slide-4 .bcg {
-	    background-image:image-url("bcg_slide-4.jpg");
-	    background-position: center center;
-	}
-	#slide-4 .hsContent {}
-	    #slide-4 h2 {
-	        padding-left: 0;
-	        padding-right: 0;
-	    }
+/* Slide 2 */
+
+#slide-2 {
+  .bcg {
+    background-image: image-url("bcg_slide-2.jpg");
+  }
+  .hsContent!, h2! {}
+}
+
+/* Slide 3 */
+
+#slide-3 {
+  .bcg {
+    background-image: image-url("bcg_slide-3.jpg");
+  }
+  .hsContent! {}
+  h2 {
+    color: #f2ead6;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Slide 4 */
+
+#slide-4 {
+  .bcg {
+    background-image: image-url("bcg_slide-4.jpg");
+    background-position: center center;
+  }
+  .hsContent! {}
+  h2 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 
 /* ==========================================================================
    Helper classes
@@ -118,18 +146,17 @@ main {
  */
 
 .ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    /* IE 6/7 fallback */
-    *text-indent: -9999px;
-}
-
-.ir:before {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+  &:before {
     content: "";
     display: block;
     width: 0;
     height: 150%;
+  }
 }
 
 /*
@@ -137,8 +164,8 @@ main {
  */
 
 .hidden {
-    display: none !important;
-    visibility: hidden;
+  display: none !important;
+  visibility: hidden;
 }
 
 /*
@@ -146,14 +173,24 @@ main {
  */
 
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  &.focusable {
+    &:active, &:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto;
+    }
+  }
 }
 
 /*
@@ -161,54 +198,19 @@ main {
  * when navigated to via the keyboard: h5bp.com/p
  */
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
 /*
  * Hide visually and from screenreaders, but maintain layout
  */
 
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix:after {
-    clear: both;
-}
 
 /*
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-
-.clearfix {
-    *zoom: 1;
-}
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -217,76 +219,74 @@ main {
    ========================================================================== */
 
 @include MQ(Mplus) {
-    
-    body, html {
-        height: auto;
+  body, html {
+    height: auto;
+  }
+  .bcg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+  section.homeSlide {
+    min-width: 768px;
+    height: 600px;
+  }
+  .hsContainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .hsContent {
+    max-width: 700px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: left;
+    padding: 0;
+    h2 {
+      font-size: 35px;
+      line-height: 38px;
     }
-    .bcg {
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        height: 100%;
-        width: 100%;
+    p {
+      width: 400px;
     }
-    section.homeSlide {
-        min-width: 768px;
-        height: 600px;
-    }
-    .hsContainer {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        position: relative;
-    }
+  }
+  #slide-1 .hsContent {
+    bottom: 200px;
+    top: auto;
+    margin-left: -80px;
+  }
+  #slide-2 {
     .hsContent {
-        max-width: 700px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        text-align: left;
-        padding: 0;
+      margin-left: -340px;
+      top: auto;
     }
-        .hsContent h2  {
-            font-size: 35px;
-            line-height: 38px;
-        }
-        .hsContent p {
-            width: 400px;
-        }
-    #slide-1 .hsContent {
-        bottom: 200px;
-        top: auto;
-        margin-left: -80px;
+    h2 {
+      position: fixed;
+      top: 70%;
     }
-    #slide-2 .hsContent {
-        margin-left: -340px;
-        top: auto;
+  }
+  #slide-3 .hsContent {
+    margin-left: -300px;
+  }
+  #slide-4 {
+    .hsContent {
+      margin-left: -340px;
+      position: fixed;
     }
-    #slide-2 h2 {
-        position: fixed;
-        top: 70%;
+    h2 {
+      background: none;
     }
-    #slide-3 .hsContent {
-        margin-left: -300px;
-    }
-    #slide-4 .hsContent {
-        margin-left: -340px;
-        position: fixed;
-    }
-        #slide-4 h2 {
-            background: none;
-        }
-
-
+  }
 }
 
 
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
 }
 
 /* ==========================================================================
@@ -295,68 +295,60 @@ main {
    ========================================================================== */
 
 @media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow: none !important;
-        text-shadow: none !important;
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a {
+    text-decoration: underline;
+    &:visited {
+      text-decoration: underline;
     }
-
-    a,
-    a:visited {
-        text-decoration: underline;
+    &[href]:after {
+      content: " (" attr(href) ")";
     }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  .ir a:after {
+    content: "";
+  }
+  a {
+    &[href^="javascript:"]:after, &[href^="#"]:after {
+      content: "";
     }
+  }
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+  tr {
+    page-break-inside: avoid;
+  }
+  img {
+    page-break-inside: avoid;
+    max-width: 100% !important;
+  }
+  @page {
+    margin: 0.5cm;
+  }
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
-
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    @page {
-        margin: 0.5cm;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2, h3 {
+    page-break-after: avoid;
+  }
 }

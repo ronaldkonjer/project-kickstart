@@ -19,7 +19,11 @@ module.exports = function (grunt) {
             },
             coffee: {
                 files: ['<%= yeoman.app %>/js/coffee/{,*/}*.coffee'],
-                tasks: ['coffee', 'autoprefixer']
+                tasks: ['coffee']
+            },
+            scripts :{
+                files : ['<%= yeoman.app %>/js/{,*/}*.js'],
+                tasks : ['requirejs']
             },
             jade: {
                 files: '<%= yeoman.app %>/views/{,*/}*.jade',
