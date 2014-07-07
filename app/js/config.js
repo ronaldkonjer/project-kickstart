@@ -17,7 +17,7 @@ requirejs.config({
         'skrollr': '../bower_components/bower-skrollr/skrollr',
 
         /* Picturefill */
-        'picturefill': '../bower_components/picturefill/picturefill',
+        'picturefill': '../bower_components/picturefill/dist/picturefill',
 
          /* jQuery */
         'jquery': '../bower_components/foundation/js/vendor/jquery',
