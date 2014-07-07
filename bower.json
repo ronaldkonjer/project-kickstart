@@ -12,7 +12,8 @@
     "enquire": "~2.1.1",
     "imagesloaded": "~3.1.8",
     "eventie": "~1.0.5",
-    "eventEmitter": "~4.2.7"
+    "eventEmitter": "~4.2.7",
+    "picturefill": "~2.0.0"
   },
   "devDependencies": {}
 }
