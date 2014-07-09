@@ -16,6 +16,7 @@ Author: Ronald Konjer
  * LAYOUT....................Layout-specific Style
  * STRUCTURE.................Site structure (header, nav, etc)
  * MODULES...................Module specific Styles
+ * SLIDER....................Sliders style
  * MEDIA.....................Images, Video, iFrames and more
  * FORMS.....................Form Styles
  * TABLES....................Tables style
@@ -98,6 +99,7 @@ Author: Ronald Konjer
 @import "partials/layout";
 @import "partials/structure";
 @import "partials/modules";
+@import "partials/slider";
 @import "partials/media";
 @import "partials/forms";
 @import "partials/tables";

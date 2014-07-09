@@ -1,19 +1,13 @@
-/* global require, Modernizr, app, ui, jquery, remfill */
-require(['app', 'ui', 'jquery'], function (app, ui, $) {
+/* global define, Modernizr, $, app, ui, jC  */
+define(['jquery','app', 'ui', 'jqueryConfig'], function ($, app, ui, jc) {
     'use strict';
- 	    
-	    if (Modernizr.canvas) {
-	       /* console.log('Canvas is present!');*/
-	    }
-
-	   if ($('html.lt-ie9').size()) {
-	    	require(['remfill'], function(REMfill) {
-	        	console.log('remfill is loaded');
-	    	});
-	    }
-
-	    app.init();
-	    ui.createUI();
+ 	
+ 	if (Modernizr.touch) {
        
+    }
 
+    app.init();
+    jc.init();
+    ui.createUI();
+	
 });

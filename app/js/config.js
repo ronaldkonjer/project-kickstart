@@ -20,10 +20,14 @@ requirejs.config({
         /*'picturefill': '../bower_components/picturefill/dist/picturefill',*/
 
          /* jQuery */
-        'jquery': '../bower_components/foundation/js/vendor/jquery',
+        'jquery': '../bower_components/jquery/dist/jquery',
+        /*'jquery': '../bower_components/foundation/js/vendor/jquery',*/
 
          /* REM-unit-polyfill */
-         'remfill': '../bower_components/REM-unit-polyfill/js/rem',
+        'remfill': '../bower_components/REM-unit-polyfill/js/rem',
+
+        /* OwlCarousel */
+        'owlCarousel': '../bower_components/OwlCarousel/owl-carousel/owl.carousel',
 
         /* Foundation total package */
         'foundation': '../bower_components/foundation/js/foundation.min',
@@ -89,6 +93,12 @@ requirejs.config({
         /* REM unit polyfill */
         'remfill': {
             exports: 'REMfill'
+        },
+
+        /* OwlCarousel */
+        'owlcarousel' : {
+        	deps : ['jquery'],
+            exports : 'owlCarousel'
         },
         
          /* Foundation total package*/

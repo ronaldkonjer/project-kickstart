@@ -52,7 +52,7 @@
       <section id="slide-2" class="homeSlide">
         <div data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;" data-bottom-top="background-position: 50% 100px;" data-anchor-target="#slide-2" class="bcg">
           <div class="hsContainer">
-            <div data-center="opacity: 1" data-center-top="opacity: 0" data--100-bottom="opacity: 0;" data-anchor-target="#slide-2" class="hsContent">
+            <div data-center="opacity: 1" data-bottom-top="opacity: 0" data--100-bottom="opacity: 0;" data-anchor-target="#slide-2" class="hsContent">
               <h2>great for story telling websites.</h2>
             </div>
           </div>
@@ -79,11 +79,16 @@
         </div>
       </section>
     </main>
-    <!-- ref:remove -->
-    <script data-main="js/config" src="bower_components/requirejs/require.js"></script>
-    <!-- endref -->
-    <!-- build:js({app,.tmp}) scripts/main.js -->
-    <!--<script src="../dist/scripts/main.js"></script>-->
-    <!-- endbuild -->
+    	<!-- ref:remove -->
+    		<script data-main="js/config" src="bower_components/requirejs/require.js"></script>
+    	<!-- endref -->
+    	<!-- build:js({app,.tmp}) scripts/main.js -->
+    	<!--<script src="../dist/scripts/main.js"></script>-->
+    	<!-- endbuild -->
+    	<!-- build:js scripts/vendor/skrollr.ie.min.js -->
+    	<!--[if lt IE 9]>
+    		<script src="bower_components/skrollr-ie/dist/skrollr.ie.min.js"></script>
+    	<![endif]-->
+    	<!-- endbuild -->
   </body>
 </html>

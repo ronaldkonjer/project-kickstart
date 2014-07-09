@@ -82,11 +82,16 @@
       <div class="large-12 column"><img src="http://placekitten.com/g/980/300" alt="Here's a cute kitten." title="Here's a cute kitten." class="cuteKitten"/>
       </div>
     </div>
-    <!-- ref:remove -->
-    <script data-main="js/config" src="bower_components/requirejs/require.js"></script>
-    <!-- endref -->
-    <!-- build:js({app,.tmp}) scripts/main.js -->
-    <!--<script src="../dist/scripts/main.js"></script>-->
-    <!-- endbuild -->
+    	<!-- ref:remove -->
+    		<script data-main="js/config" src="bower_components/requirejs/require.js"></script>
+    	<!-- endref -->
+    	<!-- build:js({app,.tmp}) scripts/main.js -->
+    	<!--<script src="../dist/scripts/main.js"></script>-->
+    	<!-- endbuild -->
+    	<!-- build:js scripts/vendor/skrollr.ie.min.js -->
+    	<!--[if lt IE 9]>
+    		<script src="bower_components/skrollr-ie/dist/skrollr.ie.min.js"></script>
+    	<![endif]-->
+    	<!-- endbuild -->
   </body>
 </html>

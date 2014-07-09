@@ -1,4 +1,4 @@
-/* global define, 'Modernizr', '$', '_', 'Fastclick', 'Foundation', 'imagesLoaded', 'Enquire', 'Skrollr', */
+/* global define, 'Modernizr', '$', '_', 'Fastclick', 'Foundation', 'imagesLoaded', 'Enquire', 'Skrollr', REM */
 /* jshint indent:4 */
 /**
  * This demo was prepared for you by Petr Tichy - Ihatetomatoes.net
@@ -15,8 +15,9 @@ define([
     'foundation',
     'imagesloaded',
     'enquire',
-    'skrollr'    
-], function($, Modernizr, _, FastClick, imagesLoaded, Enquire, Skrollr) {
+    'skrollr',
+    'remfill'    
+], function($, Modernizr, _, FastClick, imagesLoaded, Enquire, Skrollr, REM) {
     'use strict';
 
     // Setup variables
@@ -83,7 +84,6 @@ define([
 
         // Check for touch
         if (Modernizr.touch) {
-
             // Init Skrollr
             var s = skrollr.init();
             s.destroy();
