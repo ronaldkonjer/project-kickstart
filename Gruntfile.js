@@ -175,7 +175,10 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '.tmp/styles/',
-                    src: '{,*/}*.css',
+                    src: [
+                        '{,*/}*.css'
+                       /* '../bower_components/font-awesome/css/font-awesome.css'*/
+                    ],
                     dest: '.tmp/styles/'
                 }]
             }
@@ -267,7 +270,8 @@ module.exports = function (grunt) {
                         '*.{ico,png,txt}',
                         '.htaccess',
                         'images/{,*/}*.{webp,gif}',
-                        'styles/fonts/{,*/}*.*'
+                        'styles/fonts/{,*/}*.*',
+                        'templates/{,*/}*.hbs'
                         /*'bower_components/sass-bootstrap/fonts/*.*'*/
                     ]
                 }]
@@ -277,7 +281,10 @@ module.exports = function (grunt) {
                 dot: true,
                 cwd: '<%= yeoman.app %>/styles',
                 dest: '.tmp/styles/',
-                src: '{,*/}*.css'
+                src: [
+                    '{,*/}*.css',
+                    '../bower_components/font-awesome/css/font-awesome.css'
+                ]
             }
         },
         coffee: {
@@ -303,6 +310,23 @@ module.exports = function (grunt) {
         modernizr: {
             devFile: '<%= yeoman.app %>/bower_components/modernizr/modernizr.js',
             outputFile: '<%= yeoman.dist %>/bower_components/modernizr/modernizr.js',
+            extra: {
+                'shiv' : true,
+                'printshiv' : false,
+                'load' : true,
+                'mq' : false,
+                'cssclasses' : true
+            },
+            extensibility: {
+                'addtest': true,
+                'prefixed': false,
+                'teststyles': false,
+                'testprops': false,
+                'testallprops': false,
+                'hasevents': false,
+                'prefixes': false,
+                'domprefixes': false
+            },
             files: [
                 '<%= yeoman.dist %>/scripts/{,*/}*.js',
                 '<%= yeoman.dist %>/styles/{,*/}*.css',
@@ -335,8 +359,12 @@ module.exports = function (grunt) {
         },
         htmlrefs: {
             dist: {
-                src: '<%= yeoman.dist %>/index.html',
-                dest: '<%= yeoman.dist %>/index.html'
+                files: [{
+                    expand: true,
+                    cwd: '<%= yeoman.dist %>',
+                    src: ['*.html'],
+                    dest: '<%= yeoman.dist %>'
+                }]
             }
         },
         handlebars: {

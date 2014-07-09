@@ -16,11 +16,14 @@ requirejs.config({
         /* Skrollr */
         'skrollr': '../bower_components/bower-skrollr/skrollr',
 
-        /* Picturefill */
-        'picturefill': '../bower_components/picturefill/dist/picturefill',
+        /* Picturefill (polyfill for responsive images)*/
+        /*'picturefill': '../bower_components/picturefill/dist/picturefill',*/
 
          /* jQuery */
         'jquery': '../bower_components/foundation/js/vendor/jquery',
+
+         /* REM-unit-polyfill */
+         'remfill': '../bower_components/REM-unit-polyfill/js/rem',
 
         /* Foundation total package */
         'foundation': '../bower_components/foundation/js/foundation.min',
@@ -79,8 +82,13 @@ requirejs.config({
         },
 
         /* Picturefill */
-        'picturefill': {
+        /*'picturefill': {
             exports: 'Picturefill'
+        },*/
+
+        /* REM unit polyfill */
+        'remfill': {
+            exports: 'REMfill'
         },
         
          /* Foundation total package*/

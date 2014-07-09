@@ -1,4 +1,4 @@
-/* global define, 'Modernizr', '$', '_', 'Fastclick', 'Foundation', 'imagesLoaded', 'Picturefill', 'Enquire', 'Skrollr', */
+/* global define, 'Modernizr', '$', '_', 'Fastclick', 'Foundation', 'imagesLoaded', 'Enquire', 'Skrollr', */
 /* jshint indent:4 */
 /**
  * This demo was prepared for you by Petr Tichy - Ihatetomatoes.net
@@ -14,10 +14,9 @@ define([
     'fastclick',
     'foundation',
     'imagesloaded',
-    'picturefill',
     'enquire',
     'skrollr'    
-], function($, Modernizr, _, FastClick, imagesLoaded, Picturefill, Enquire, Skrollr) {
+], function($, Modernizr, _, FastClick, imagesLoaded, Enquire, Skrollr) {
     'use strict';
 
     // Setup variables
@@ -44,7 +43,7 @@ define([
                     // Fade in sections
                     $body.removeClass('loading').addClass('loaded');
 
-                }, 800);
+                    }, 800);
             });
             enquire.register("screen and (min-width : 43em;)", initAdjustWindow(), false);
         };
