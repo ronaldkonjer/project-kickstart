@@ -1,4 +1,4 @@
-/* global define, Modernizr, $, app, ui, jC  */
+/* global define, Modernizr, $, app, ui, jc  */
 define(['jquery','app', 'ui', 'jqueryConfig'], function ($, app, ui, jc) {
     'use strict';
  	
